@@ -4,11 +4,11 @@ import java.awt.event.ActionListener;
 
 public class Anasayfa implements ActionListener {
     JFrame frame = new JFrame();
-    JButton button = new JButton("Profile Göster");
+    JButton button = new JButton("Profil Göster");
 
     public Anasayfa(){
         button.addActionListener(this);
-        button.setBounds(200,200,100,50);
+        button.setBounds(200,200,200,50);
         frame.add(button);
 
         frame.setSize(500, 500);
@@ -22,6 +22,8 @@ public class Anasayfa implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        if (e.getSource() == button){
+            ProfilSayfası profilSayfası = new ProfilSayfası();
+        }
     }
 }
